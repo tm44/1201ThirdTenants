@@ -1,0 +1,460 @@
+﻿body {
+    margin-left: 15px;
+    width: 940px;
+    font-family: arial, lucida sans unicode;
+    font-size: .75em;
+    color: #333333;
+}
+
+#printLogo {
+    display: none;
+}
+
+#phone {
+    color: #6F6F6F;
+    display: inline-block;
+    font-weight: bold;
+    padding-right: 12px;
+}
+
+input {
+    font-size: .9em;
+    color: #808080;
+}
+
+a img {
+    border: 0;
+}
+
+p {
+    padding-bottom: 1em;
+}
+
+th {
+    background-color: #193E55;
+    color: #fff;
+    cursor: pointer;
+}
+
+td {
+    padding-top: 2px;
+    padding-right: 7px;
+    text-align: left;
+}
+
+table {
+    padding-bottom: 1em;
+}
+
+    table.styled td, th {
+        padding: 6px 11px;
+        font-size: .9em;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    table.NMTDirectory {
+        width: 100%;
+    }
+
+        table.NMTDirectory td {
+            padding: 3px;
+            font-size: .9em;
+        }
+
+        table.NMTDirectory th {
+            padding: 3px;
+            font-size: .9em;
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-color: #193E55
+        }
+
+            table.NMTDirectory th.headerSortDown {
+                background-image: url("/_images/common/asc.gif");
+                background-color: #193E55;
+            }
+
+            table.NMTDirectory th.headerSortUp {
+                background-image: url("/_images/common/desc.gif");
+                background-color: #193E55;
+            }
+
+        table.NMTDirectory th {
+            background-image: url("/_images/common/bg.gif");
+        }
+
+        table.NMTDirectory td.Directory_Individual {
+            width: 141px;
+        }
+
+        table.NMTDirectory td.Directory_Practice {
+            width: 202px;
+        }
+
+        table.NMTDirectory td.Directory_Suite {
+            width: 43px;
+        }
+
+        table.NMTDirectory td.Directory_Telephone {
+            width: 84px;
+        }
+
+        table.NMTDirectory td.Directory_Specialty {
+        }
+
+tr.oddRow {
+    background-color: #e9e9e9;
+}
+
+tr.evenRow {
+    background-color: #dcdcdc;
+}
+
+td.cellHover {
+    background-color: #ababab;
+}
+
+#logo {
+    margin: 20px 0;
+    text-align: right;
+    font-size: .9em;
+}
+
+#main {
+    height: 404px;
+    width: 940px;
+    margin-top: 39px;
+}
+
+#mainBody {
+    width: 748px;
+}
+
+.pageImage {
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border: 13px solid #a4a398
+}
+
+p.xsltsearch_result_title {
+    padding-bottom: 0
+}
+
+.whatsNew {
+    background: none repeat scroll 0 0 #939284;
+    width: 172px;
+    position: absolute;
+    top: 78px;
+    opacity: .84;
+    padding-top: 27px;
+}
+
+#whatsNewImg {
+    position: absolute;
+    z-index: 1;
+}
+
+.whatsNew div {
+    padding: 7px 10px;
+    background: url("/_nmt/_images/home/whatsnewseparator.gif") no-repeat scroll bottom transparent;
+}
+
+    .whatsNew div a {
+        color: #fff;
+    }
+
+        .whatsNew div a:hover {
+            color: #333;
+        }
+
+ul.dropdown li.selectedNav {
+    background: none repeat scroll 0 0 #193E55;
+}
+
+    ul.dropdown li.selectedNav a {
+        color: #fff;
+    }
+
+#bodyContainer #topNav {
+    border-bottom: 2px solid #193E55;
+    padding-bottom: 4px;
+    /*width: 654px;*/
+}
+
+#footer {
+    text-align: right;
+    font-size: .85em;
+    padding-top: 5px;
+    clear: both;
+    background: url("/_1201/_images/common/footer_bar.jpg") no-repeat;
+    margin: 40px 0 0 -20px;
+}
+
+    #footer img {
+        position: relative;
+        top: 2px;
+    }
+
+#breadcrumb {
+    position: absolute;
+    left: 30px;
+    color: #fff;
+    margin-top: -3px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+    #breadcrumb a {
+        color: #fff;
+    }
+
+#banner {
+    background-image: url("/_1201/_images/home/banner.png");
+    width: 822px;
+    height: 66px;
+    position: absolute;
+    top: 416px;
+    left: 0px;
+}
+
+#searchbox {
+    border: 1px solid #193E55;
+    width: 100px;
+    height: 13px;
+}
+
+#search {
+    position: relative;
+    top: 3px;
+}
+
+#leftNav {
+    width: 190px;
+    float: left;
+    padding: 55px 0 20px 0;
+}
+
+.leftNavSecondLevel {
+    background-color: #6f6f6f;
+    height: 34px;
+    margin-top: 6px;
+    width: 145px;
+}
+
+.leftNavThirdLevel {
+    width: 145px;
+    background-color: #a4a398;
+}
+
+    .leftNavThirdLevel div {
+        padding: 3px 0 3px 12px; /* text-indent: -12px; */
+        background: url("/_nmt/_images/common/leftnavseparator.gif") no-repeat scroll bottom transparent;
+    }
+
+#leftNav div.leftNavThirdLevel div a:hover {
+    color: #6f6f6f;
+}
+
+#leftNav div a {
+    color: #fff;
+    display: block;
+    height: 100%;
+    padding: 2px 5px 2px 10px;
+}
+
+#leftNav div.leftNavSecondLevel:hover {
+    background-color: #193E55;
+}
+
+#leftNav div.selectedNav {
+    background-color: #193E55;
+}
+
+#leftNav div.selectedSubNav {
+    background-color: #345671;
+}
+
+.notSelectedThirdLevel div:hover {
+    background-color: #345671;
+}
+
+#leftNav #thirdLevelSelectedLink {
+    color: #aaa
+}
+
+#bodyContainer {
+    margin-left: 190px;
+}
+
+#slideshow img {
+    z-index: -3;
+    position: absolute;
+    top: 78px;
+}
+
+    #slideshow IMG.active {
+        z-index: -1;
+    }
+
+    #slideshow IMG.last-active {
+        z-index: -2;
+    }
+
+#banner img {
+    z-index: -2;
+    position: absolute;
+}
+
+    #banner IMG.active {
+        z-index: 0;
+    }
+
+    #banner IMG.last-active {
+        z-index: -1;
+    }
+
+#arrow {
+    position: absolute;
+    left: 922px;
+    top: 266px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #193E55;
+    font-weight: bold;
+}
+
+    a:hover, a:active {
+        text-decoration: none;
+        color: #808080;
+        font-weight: bold;
+    }
+
+ul {
+    list-style: none;
+}
+
+#mainBody ul {
+    list-style: disc inside none;
+    padding-top: 10px;
+}
+
+#mainBody li {
+    padding-left: 14px;
+}
+
+    #mainBody li ul li {
+        list-style: circle inside none;
+    }
+
+#mainBody ol {
+    padding-left: 17px;
+}
+
+    #mainBody ol li {
+        padding: 1em 0 0 0;
+    }
+
+.xsltsearch_result {
+    padding-top: 10px;
+}
+
+/* 
+	LEVEL ONE
+*/
+ul.dropdown { /* position: relative;*/
+}
+
+    ul.dropdown li {
+        float: left;
+        zoom: 1;
+        background: #fff;
+    }
+
+    ul.dropdown a:hover {
+        color: #fff;
+    }
+
+    ul.dropdown a:active {
+        color: #fff;
+    }
+
+    ul.dropdown li a {
+        display: block;
+        padding: 2px 8px;
+        padding-right: 20px;
+        color: #6f6f6f;
+        font-weight: bold;
+    }
+
+    ul.dropdown li:last-child a {
+        border-right: none;
+    }
+    /* Doesn't work in IE */
+    ul.dropdown li.hover,
+    ul.dropdown li:hover {
+        background: #193E55;
+        color: #fff;
+        position: relative;
+    }
+
+        ul.dropdown li.hover a {
+            color: #fff;
+        }
+
+
+    /* 
+	LEVEL TWO
+*/
+    ul.dropdown ul {
+        width: 170px;
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+        ul.dropdown ul li.hover, ul.dropdown ul li:hover {
+            background-color: #939284;
+        }
+
+        ul.dropdown ul li {
+            font-weight: normal;
+            background: #939284;
+            color: #fff;
+            opacity: 0.84;
+            filter: alpha(opacity=84);
+            border-bottom: 1px solid #6C6D67;
+            float: none;
+        }
+            /* IE 6 & 7 Needs Inline Block */
+            ul.dropdown ul li a {
+                border-right: none;
+                width: 100%;
+                display: inline-block;
+                color: #fff;
+            }
+
+                ul.dropdown ul li a:hover {
+                    color: #333;
+                }
+
+        /* 
+	LEVEL THREE
+*/
+        ul.dropdown ul ul {
+            left: 100%;
+            top: 0;
+        }
+
+    ul.dropdown li:hover > ul {
+        visibility: visible;
+    }
