@@ -9,6 +9,11 @@
     <link href="Content/sm-core-css.css" rel="stylesheet" />
     <link href="Content/sm-clean.css" rel="stylesheet" />
     <link href="Content/Site.css" rel="stylesheet" />
+    <style>
+        #main-menu {
+            border-bottom: none;
+        }
+    </style>
 </head>
 <body>
     <div class="container">

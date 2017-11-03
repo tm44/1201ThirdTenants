@@ -21,11 +21,6 @@ textarea {
     max-width: 280px;
 }
 
-footer {
-    font-size: .85em;
-    padding-top: 5px;
-}
-
 #phone {
     color: #6F6F6F;
     display: inline-block;
@@ -105,6 +100,27 @@ input {
     border: 13px solid #a4a398;
 }
 
+#footer {
+    text-align: right;
+    font-size: .85em;
+    padding-top: 5px;
+    clear: both;
+    background: url(/images/footer_bar.jpg) no-repeat;
+    margin: 40px 0 0 -20px;
+}
+
+#breadcrumb {
+    padding-left: 30px;
+    color: #fff;
+    margin-top: -3px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+    #breadcrumb a {
+        color: #fff;
+    }
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     body {
@@ -127,10 +143,8 @@ input {
     #topnav {
         padding-left: 245px;
         border-bottom: 2px solid #193E55;
-        /*padding-bottom: 4px;*/
     }
     #main-menu {
         border-bottom: 2px solid #193E55;
-        padding-bottom: 4px;
     }
 }

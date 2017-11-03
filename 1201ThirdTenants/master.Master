@@ -2,6 +2,8 @@
 
 <%@ Register Src="~/Controls/topnav.ascx" TagPrefix="uc1" TagName="topnav" %>
 <%@ Register Src="~/Controls/leftnav.ascx" TagPrefix="uc1" TagName="leftnav" %>
+<%@ Register Src="~/Controls/footer.ascx" TagPrefix="uc1" TagName="footer" %>
+
 
 <!DOCTYPE html>
 
@@ -38,7 +40,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-sm-2 hidden-xs">
                     <section>
                         <uc1:leftnav runat="server" ID="leftnav" />
                     </section>
@@ -48,13 +50,7 @@
                     </asp:ContentPlaceHolder>
                 </div>
             </div>
-            <div class="row hidden-xs">
-                <footer class="pull-right">
-                    <a href="http://www.wrightrunstad.com" target="_blank">
-                        <img src="/images/wrc_logo.jpg" width="214" height="13" alt="Wright Runstad &amp; Company" id="wrc_logo"></a>
-                    Copyright &copy <%=System.DateTime.Now.Year %>
-                </footer>
-            </div>
+            <uc1:footer runat="server" ID="footer" />
         </div>
     </form>
 </body>

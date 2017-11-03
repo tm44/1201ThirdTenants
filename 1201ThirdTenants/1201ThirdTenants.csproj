@@ -137,6 +137,7 @@
     <Content Include="Content\sm-blue.css" />
     <Content Include="Content\sm-clean.css" />
     <Content Include="Content\sm-core-css.css" />
+    <Content Include="Controls\footer.ascx" />
     <Content Include="Controls\leftnav.ascx" />
     <Content Include="Controls\topnav.ascx" />
     <Content Include="Default.aspx" />
@@ -150,6 +151,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\building_information.jpg" />
+    <Content Include="Images\footer_bar.jpg" />
     <Content Include="master.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\1201_Home.jpg" />
@@ -220,6 +222,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\leftnav.ascx.cs">
       <DependentUpon>leftnav.ascx</DependentUpon>
