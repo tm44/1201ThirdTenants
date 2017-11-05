@@ -2,29 +2,29 @@
 <siteMap>
   <!--xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >-->
   <siteMapNode url="~/" title="Home"  description="" />
-  <siteMapNode url="~/building-directory.aspx" title="Building Directory"  description="" />
-  <siteMapNode url="~/building-info.aspx" title="Building Info"  description="">
-    <siteMapNode url="~/building-info/building-history.aspx" title="Building History"  description="" />
-    <siteMapNode url="~/building-info/space-available.aspx" title="Space Available"  description="" />
-    <siteMapNode url="~/building-info/parking.aspx" title="Parking"  description="" />
-    <siteMapNode url="~/building-info/amenities.aspx" title="Amenities"  description="" />
+  <siteMapNode url="~/building-directory" title="Building Directory"  description="" />
+  <siteMapNode url="~/building-info/" title="Building Info"  description="">
+    <siteMapNode url="~/building-info/building-history" title="Building History"  description="" />
+    <siteMapNode url="~/building-info/space-available" title="Space Available"  description="" />
+    <siteMapNode url="~/building-info/parking" title="Parking"  description="" />
+    <siteMapNode url="~/building-info/amenities" title="Amenities"  description="" />
   </siteMapNode>
-  <siteMapNode url="~/security.aspx" title="Security"  description="">
-    <siteMapNode url="~/security/important-numbers.aspx" title="Important Numbers"  description="" />
-    <siteMapNode url="~/security/security-practices.aspx" title="Security Practices"  description="" />
-    <siteMapNode url="~/security/office-security-tips.aspx" title="Office Security Tips"  description="" />
+  <siteMapNode url="~/security/" title="Security"  description="">
+    <siteMapNode url="~/security/important-numbers" title="Important Numbers"  description="" />
+    <siteMapNode url="~/security/security-practices" title="Security Practices"  description="" />
+    <siteMapNode url="~/security/office-security-tips" title="Office Security Tips"  description="" />
   </siteMapNode>
-  <siteMapNode url="~/your-safety.aspx" title="Your Safety"  description="">
-    <siteMapNode url="~/your-safety/emergency-procedures.aspx" title="Emergency Procedures"  description="" />
-    <siteMapNode url="~/your-safety/floor-wardens.aspx" title="Floor Wardens"  description="" />
-    <siteMapNode url="~/your-safety/resources.aspx" title="Resources"  description="" />
+  <siteMapNode url="~/your-safety/" title="Your Safety"  description="">
+    <siteMapNode url="~/your-safety/emergency-procedures" title="Emergency Procedures"  description="" />
+    <siteMapNode url="~/your-safety/floor-wardens" title="Floor Wardens"  description="" />
+    <siteMapNode url="~/your-safety/resources" title="Resources"  description="" />
   </siteMapNode>
-  <siteMapNode url="~/tenant-services.aspx" title="Tenant Services"  description="">
-    <siteMapNode url="~/tenant-services/enter-work-order.aspx" title="Enter Work Order"  description="" />
-    <siteMapNode url="~/tenant-services/newsletters.aspx" title="Newsletters"  description="" />
-    <siteMapNode url="~/tenant-services/tenant-handbook.aspx" title="Tenant Handbook"  description="" />
-    <siteMapNode url="~/tenant-services/tenant-resources.aspx" title="Tenant Resources"  description="" />
-    <siteMapNode url="~/tenant-services/tenant-improvements.aspx" title="Tenant Improvements"  description="" />
+  <siteMapNode url="~/tenant-services/" title="Tenant Services"  description="">
+    <siteMapNode url="~/tenant-services/enter-work-order" title="Enter Work Order"  description="" />
+    <siteMapNode url="~/tenant-services/newsletters" title="Newsletters"  description="" />
+    <siteMapNode url="~/tenant-services/tenant-handbook" title="Tenant Handbook"  description="" />
+    <siteMapNode url="~/tenant-services/tenant-resources" title="Tenant Resources"  description="" />
+    <siteMapNode url="~/tenant-services/tenant-improvements" title="Tenant Improvements"  description="" />
   </siteMapNode>
-  <siteMapNode url="~/contact.aspx" title="Contact"  description="" />
+  <siteMapNode url="~/contact/" title="Contact"  description="" />
 </siteMap>

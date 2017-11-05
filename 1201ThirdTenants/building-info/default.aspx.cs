@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace _1201ThirdTenants
+namespace _1201ThirdTenants.building_info
 {
-    public partial class _Default : BasePage
+    public partial class _default : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

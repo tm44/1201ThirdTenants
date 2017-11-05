@@ -16,13 +16,15 @@ namespace _1201ThirdTenants.Controls
         {
             string virtualSiteName = String.Empty;// ConfigurationManager.AppSettings["DevSiteName"].ToString();
             string actualRequestPath = Request.Url.AbsolutePath.ToString();//.Replace(virtualSiteName, String.Empty);
-            _currentFolder = String.Empty;
+            _currentFolder = Request.Url.LocalPath.Split('/')[1];
 
-            if (actualRequestPath.LastIndexOf("/") > 0 && actualRequestPath.IndexOf("/_admin/whatsnew") == -1)
-            {
-                _currentFolder = actualRequestPath.Substring(1, actualRequestPath.IndexOf("/", 1) - 1);
-                GetSideNav();
-            }
+            GetSideNav();
+
+            //if (actualRequestPath.LastIndexOf("/") == 0)
+            //{
+            //    _currentFolder = actualRequestPath.Substring(1);
+            //    GetSideNav();
+            //}
         }
 
         private void GetSideNav()
@@ -30,31 +32,52 @@ namespace _1201ThirdTenants.Controls
             BasePage basePage = this.Page as BasePage;
 
             if (basePage == null)
-            {
                 return;
-            }
+
             XmlDocument doc = basePage.GetSiteMapDocument();
 
-            // use the translate() function to make a case-insensitive search
-            //XmlNodeList subFolders = doc.SelectNodes("/siteMap/siteMapNode/siteMapNode[translate(@url, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') ='~/" + _currentFolder.ToLower() + "/']/*");
-            XmlNodeList subFolders = doc.SelectNodes("/siteMap/siteMapNode/siteMapNode[translate(@url, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') ='~/" + _currentFolder.ToLower() + "/']/*");
+            var rootPage = doc.SelectSingleNode(string.Format("/siteMap/siteMapNode[starts-with(translate(@url, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '~/{0}')]", _currentFolder));
+            var subFolders = doc.SelectNodes(string.Format("/siteMap/siteMapNode/siteMapNode[starts-with(translate(@url, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '~/{0}/')]", _currentFolder));
+            
+
+            Panel outerPanel = new Panel();
+            outerPanel.ClientIDMode = ClientIDMode.Static;
+            outerPanel.ID = "leftNav";
+
+            Panel rootPanel = new Panel();
+            rootPanel.CssClass = "leftNavSecondLevel";
+
+            var rootLink = new HyperLink()
+            {
+                Text = rootPage.Attributes["title"].Value,
+                NavigateUrl = rootPage.Attributes["url"].Value
+            };
+
+            if (rootLink.NavigateUrl.Replace("~", "").Replace(".aspx", "").Replace("/", "") == Request.CurrentExecutionFilePath.Replace(".aspx", "").Replace("/", "").Replace("default", ""))
+                rootPanel.CssClass += " selectedNav";
+
+            rootPanel.Controls.Add(rootLink);
+
+            outerPanel.Controls.Add(rootPanel);
 
             foreach (XmlNode node in subFolders)
             {
                 Panel pnl = new Panel();
-                pnl.CssClass = "sideNavItem";
+                pnl.CssClass = "leftNavSecondLevel";
 
                 HyperLink link = new HyperLink();
                 link.Text = node.Attributes["title"].Value;
                 link.NavigateUrl = node.Attributes["url"].Value;
 
+                if (link.NavigateUrl.Replace("~", "").Replace(".aspx", "").Replace("/", "") == Request.CurrentExecutionFilePath.Replace(".aspx", "").Replace("/", "").Replace("index", ""))
+                    pnl.CssClass += " selectedNav";
+
                 pnl.Controls.Add(link);
 
-                //LiteralControl br = new LiteralControl("<br />");
-
-                //PlaceHolder1.Controls.Add(link);
-                PlaceHolder1.Controls.Add(pnl);
+                outerPanel.Controls.Add(pnl);
+                
             }
+            PlaceHolder1.Controls.Add(outerPanel);
         }
     }
 }

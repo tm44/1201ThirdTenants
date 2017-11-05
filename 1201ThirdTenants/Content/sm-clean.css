@@ -148,10 +148,11 @@
             background-color: #193E55;
             color: #fff;
         }
-  .sm-clean a.current {
-    /*color: #D23600;*/
-    color: #fff;
-  }
+        .sm-clean a.current {
+            /*color: #D23600;*/
+            color: #fff;
+            background-color: #193E55;
+        }
   .sm-clean a.disabled {
     color: #bbbbbb;
   }

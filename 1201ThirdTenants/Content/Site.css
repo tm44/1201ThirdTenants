@@ -2,8 +2,13 @@
 body {
     font-family: arial, lucida sans unicode;
     padding: 20px;
+    color: #333333;
 }
-
+a {
+    text-decoration: none;
+    color: #193E55;
+    font-weight: bold;
+}
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
@@ -87,11 +92,21 @@ input {
     padding: 2px 5px 2px 10px;
 }
 
+#leftNav div.leftNavSecondLevel:hover {
+    background-color: #193E55;
+}
+
 .leftNavSecondLevel {
     background-color: #6f6f6f;
     height: 34px;
     margin-top: 6px;
     width: 145px;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    color: #808080;
+    font-weight: bold;
 }
 
 .pageImage {

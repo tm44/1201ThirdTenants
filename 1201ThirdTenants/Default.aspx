@@ -1,4 +1,5 @@
-﻿<%@ Register Src="~/Controls/topnav.ascx" TagPrefix="uc1" TagName="topnav" %>
+﻿<%@ Page Title="1201 Third Tenants" Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="_1201ThirdTenants._Default" %>
+<%@ Register Src="~/Controls/topnav.ascx" TagPrefix="uc1" TagName="topnav" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>

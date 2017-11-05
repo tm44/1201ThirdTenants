@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row header">
                 <div class="col-md-3" style="padding-left: 0;">
-                    <img src="Images/logo.png" class="img-responsiveXXX" height="22" width="475" alt="1201 Third Avenue" />
+                    <img src="/Images/logo.png" class="img-responsiveXXX" height="22" width="475" alt="1201 Third Avenue" />
                 </div>
                 <div class="col-md-4 pull-right hidden-xs" style="font-size: .9em">
                     <span id="phone">206-224-1201</span>
@@ -53,5 +53,31 @@
             <uc1:footer runat="server" ID="footer" />
         </div>
     </form>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery.smartmenus.min.js"></script>
+<script>
+    $(function () {
+        $('#main-menu').smartmenus({ markCurrentItem: true, markCurrentTree: true});
+        var $mainMenuState = $('#main-menu-state');
+        if ($mainMenuState.length) {
+            // animate mobile menu
+            $mainMenuState.change(function (e) {
+                var $menu = $('#main-menu');
+                if (this.checked) {
+                    $menu.hide().slideDown(250, function () { $menu.css('display', ''); });
+                } else {
+                    $menu.show().slideUp(250, function () { $menu.css('display', ''); });
+                }
+            });
+            // hide mobile menu beforeunload
+            $(window).on('beforeunload unload', function () {
+                if ($mainMenuState[0].checked) {
+                    $mainMenuState[0].click();
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>

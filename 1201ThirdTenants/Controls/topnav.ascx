@@ -4,7 +4,9 @@
     <label class="main-menu-btn" for="main-menu-state">
         <span class="main-menu-btn-icon"></span>Toggle main menu visibility
     </label>
-    <ul class="sm sm-clean" id="main-menu">
+    <asp:PlaceHolder ID="MenuPlaceholder" runat="server" Visible="true">
+        </asp:PlaceHolder>
+<%--    <ul class="sm sm-clean" id="main-menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">Building Directory</a></li>
         <li><a href="#">Building Info</a>
@@ -17,5 +19,6 @@
         <li><a href="#">Your Safety</a></li>
         <li><a href="#">Tenant Services</a></li>
         <li><a href="#">Contact</a></li>
-    </ul>
+    </ul>--%>
 </div>
+

@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace _1201ThirdTenants
+namespace _1201ThirdTenants.BuildingInfo
 {
-    public partial class building_info : System.Web.UI.Page
+    public partial class building_history : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

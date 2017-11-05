@@ -1,4 +1,4 @@
-﻿<%@ Page Title="201 Third Avenue - Building Info" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="building-info.aspx.cs" Inherits="_1201ThirdTenants.building_info" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="_1201ThirdTenants.building_info._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -46,6 +46,4 @@
 <p><strong>From Highway 99/Alaskan Way Viaduct (Northbound)</strong><br>Take the Seneca Street exit. Turn left on First Avenue. Turn right on University Street. Proceed east on University Street to Third Avenue. Turn right onto Third Avenue. The building is located on Third Avenue between University Street and Seneca Street. The garage entrance is on Seneca Street.</p>
 <p><a href="/media/11281/quick_fact_sheet_for_1201_third_avenue.pdf" target="_blank" title="Quick Fact Sheet for 1201 Third Avenue">Click here for a printable Quick Fact Sheet about 1201 Third Avenue.</a> (pdf)</p>
 <p></p>
-            
-            
 </asp:Content>
