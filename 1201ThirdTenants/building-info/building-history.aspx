@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>Building History</h2>
+    <h1>Building History</h1>
     <p>
         <img src="/images/building_information.jpg" width="320" height="244" alt="Security" class="pull-right img-responsive pageImage">This 55-story, classically designed tower has commanding views of Elliott Bay, Lake Union, and the Cascade and Olympic Mountains. The granite and emerald-green-glass building features a pedestrian plaza with three levels of shops and services, as well as a public atrium overlooking the plaza. When it opened in 1988, The New York Times named 1201 Third Avenue as one of the nation’s three best new office buildings.
     </p>

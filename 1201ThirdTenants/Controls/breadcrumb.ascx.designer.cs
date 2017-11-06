@@ -10,15 +10,15 @@
 namespace _1201ThirdTenants.Controls {
     
     
-    public partial class footer {
+    public partial class breadcrumb {
         
         /// <summary>
-        /// breadcrumb control.
+        /// Placeholder1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::_1201ThirdTenants.Controls.breadcrumb breadcrumb;
+        protected global::System.Web.UI.WebControls.PlaceHolder Placeholder1;
     }
 }

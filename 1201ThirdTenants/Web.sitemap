@@ -15,7 +15,16 @@
     <siteMapNode url="~/security/office-security-tips" title="Office Security Tips"  description="" />
   </siteMapNode>
   <siteMapNode url="~/your-safety/" title="Your Safety"  description="">
-    <siteMapNode url="~/your-safety/emergency-procedures" title="Emergency Procedures"  description="" />
+    <siteMapNode url="~/your-safety/emergency-procedures" title="Emergency Procedures"  description="">
+      <siteMapNode url="~/your-safety/emergency-procedures/bomb-threat" title="Bomb Threat"  description="" />
+      <siteMapNode url="~/your-safety/emergency-procedures/earthquake" title="Earthquake"  description="" />
+      <siteMapNode url="~/your-safety/emergency-procedures/building-evacuation" title="Building Evacuation"  description="" />
+      <siteMapNode url="~/your-safety/emergency-procedures/fire" title="Fire"  description="" />
+      <siteMapNode url="~/your-safety/emergency-procedures/medical-emergencies" title="Medical Emergencies"  description="" />
+      <siteMapNode url="~/your-safety/emergency-procedures/power-outage" title="Power Outage"  description="" />
+      <siteMapNode url="~/your-safety/emergency-procedures/suspicious-package" title="Suspicious Package"  description="" />
+      <siteMapNode url="~/your-safety/emergency-procedures/suspicious or hazardous substance" title="Suspicious or Hazardous Substance"  description="" />
+    </siteMapNode>
     <siteMapNode url="~/your-safety/floor-wardens" title="Floor Wardens"  description="" />
     <siteMapNode url="~/your-safety/resources" title="Resources"  description="" />
   </siteMapNode>

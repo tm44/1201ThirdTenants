@@ -4,6 +4,17 @@ body {
     padding: 20px;
     color: #333333;
 }
+
+h1 {
+    color: #808080;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
 a {
     text-decoration: none;
     color: #193E55;
@@ -89,7 +100,7 @@ input {
     color: #fff;
     display: block;
     height: 100%;
-    padding: 2px 5px 2px 10px;
+    padding: 2px 5px 15px 10px;
 }
 
 #leftNav div.leftNavSecondLevel:hover {
@@ -98,16 +109,32 @@ input {
 
 .leftNavSecondLevel {
     background-color: #6f6f6f;
-    height: 34px;
     margin-top: 6px;
     width: 145px;
 }
 
-a:hover, a:active {
-    text-decoration: none;
-    color: #808080;
-    font-weight: bold;
+#leftNav div.selectedSubNav {
+    background-color: #345671;
 }
+
+.leftNavThirdLevel {
+    width: 145px;
+    background-color: #a4a398;
+}
+
+    .leftNavThirdLevel div {
+        padding: 3px 0 3px 12px;
+        /* text-indent: -12px; */
+        background: url(/images/leftnavseparator.gif) no-repeat scroll bottom transparent;
+    }
+#leftNav div.leftNavThirdLevel div a {
+    padding-bottom: 2px;
+}
+    a:hover, a:active {
+        text-decoration: none;
+        color: #808080;
+        font-weight: bold;
+    }
 
 .pageImage {
     margin-left: 10px;
@@ -159,6 +186,7 @@ a:hover, a:active {
         padding-left: 245px;
         border-bottom: 2px solid #193E55;
     }
+
     #main-menu {
         border-bottom: 2px solid #193E55;
     }

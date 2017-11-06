@@ -19,12 +19,6 @@ namespace _1201ThirdTenants.Controls
             _currentFolder = Request.Url.LocalPath.Split('/')[1];
 
             GetSideNav();
-
-            //if (actualRequestPath.LastIndexOf("/") == 0)
-            //{
-            //    _currentFolder = actualRequestPath.Substring(1);
-            //    GetSideNav();
-            //}
         }
 
         private void GetSideNav()
@@ -38,7 +32,8 @@ namespace _1201ThirdTenants.Controls
 
             var rootPage = doc.SelectSingleNode(string.Format("/siteMap/siteMapNode[starts-with(translate(@url, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '~/{0}')]", _currentFolder));
             var subFolders = doc.SelectNodes(string.Format("/siteMap/siteMapNode/siteMapNode[starts-with(translate(@url, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '~/{0}/')]", _currentFolder));
-            
+            var subSubFolders = doc.SelectNodes(string.Format("/siteMap/siteMapNode/siteMapNode[starts-with(translate(@url, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '~/{0}/')]/*", _currentFolder));
+
 
             Panel outerPanel = new Panel();
             outerPanel.ClientIDMode = ClientIDMode.Static;
@@ -53,7 +48,7 @@ namespace _1201ThirdTenants.Controls
                 NavigateUrl = rootPage.Attributes["url"].Value
             };
 
-            if (rootLink.NavigateUrl.Replace("~", "").Replace(".aspx", "").Replace("/", "") == Request.CurrentExecutionFilePath.Replace(".aspx", "").Replace("/", "").Replace("default", ""))
+            if (CleanUrl(rootLink.NavigateUrl) == CleanCurrentPath())
                 rootPanel.CssClass += " selectedNav";
 
             rootPanel.Controls.Add(rootLink);
@@ -69,15 +64,49 @@ namespace _1201ThirdTenants.Controls
                 link.Text = node.Attributes["title"].Value;
                 link.NavigateUrl = node.Attributes["url"].Value;
 
-                if (link.NavigateUrl.Replace("~", "").Replace(".aspx", "").Replace("/", "") == Request.CurrentExecutionFilePath.Replace(".aspx", "").Replace("/", "").Replace("index", ""))
+                if (CleanUrl(link.NavigateUrl) == CleanCurrentPath())
                     pnl.CssClass += " selectedNav";
 
                 pnl.Controls.Add(link);
 
                 outerPanel.Controls.Add(pnl);
+
+                if (node.HasChildNodes)
+                {
+                    Panel level3container = new Panel();
+                    level3container.CssClass = "leftNavThirdLevel selectedSubNav";
+
+                    foreach (XmlNode thirdLevelNode in node.ChildNodes)
+                    {
+                        Panel level3pnl = new Panel();
+                        //level3pnl.CssClass = "leftNavThirdLevel";
+
+                        HyperLink level3link = new HyperLink();
+                        level3link.Text = thirdLevelNode.Attributes["title"].Value;
+                        level3link.NavigateUrl = thirdLevelNode.Attributes["url"].Value;
+
+                        if (CleanUrl(level3link.NavigateUrl) == CleanCurrentPath())
+                            level3pnl.CssClass += " thirdLevelSelectedLink";
+
+
+                        level3pnl.Controls.Add(level3link);
+                        level3container.Controls.Add(level3pnl);
+                        outerPanel.Controls.Add(level3container);
+                    }
+                }
                 
             }
             PlaceHolder1.Controls.Add(outerPanel);
+        }
+
+        private string CleanCurrentPath()
+        {
+            return Request.CurrentExecutionFilePath.Replace(".aspx", "").Replace("/", "").Replace("default", "");
+        }
+
+        private string CleanUrl(string url)
+        {
+            return url.Replace("~", "").Replace(".aspx", "").Replace("/", "");
         }
     }
 }

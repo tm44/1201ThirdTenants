@@ -13,9 +13,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="Content/sm-core-css.css" rel="stylesheet" />
-    <link href="Content/sm-clean.css" rel="stylesheet" />
-    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="/Content/sm-core-css.css" rel="stylesheet" />
+    <link href="/Content/sm-clean.css" rel="stylesheet" />
+    <link href="/Content/Site.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row header">
                 <div class="col-md-3" style="padding-left: 0;">
-                    <img src="/Images/logo.png" class="img-responsiveXXX" height="22" width="475" alt="1201 Third Avenue" />
+                    <a href="/"><img src="/Images/logo.png" class="img-responsiveXXX" height="22" width="475" alt="1201 Third Avenue" /></a>
                 </div>
                 <div class="col-md-4 pull-right hidden-xs" style="font-size: .9em">
                     <span id="phone">206-224-1201</span>
