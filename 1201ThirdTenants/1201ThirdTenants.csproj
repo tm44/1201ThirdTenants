@@ -173,6 +173,7 @@
     <Content Include="tenant-services\tenant-resources.aspx" />
     <Content Include="your-safety\default.aspx" />
     <Content Include="your-safety\emergency-procedures.aspx" />
+    <Content Include="your-safety\emergency-procedures\bomb-threat.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\1201_Home.jpg" />
     <Content Include="Images\banner.png" />
@@ -445,6 +446,13 @@
     </Compile>
     <Compile Include="your-safety\emergency-procedures.aspx.designer.cs">
       <DependentUpon>emergency-procedures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\bomb-threat.aspx.cs">
+      <DependentUpon>bomb-threat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\bomb-threat.aspx.designer.cs">
+      <DependentUpon>bomb-threat.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

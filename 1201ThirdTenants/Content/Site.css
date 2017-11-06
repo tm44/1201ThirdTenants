@@ -92,7 +92,7 @@ input {
     z-index: 1;
 }
 
-#leftNav div.selectedNav {
+#leftNav .selectedNav {
     background-color: #193E55;
 }
 
@@ -113,7 +113,7 @@ input {
     width: 145px;
 }
 
-#leftNav div.selectedSubNav {
+#leftNav .selectedSubNav {
     background-color: #345671;
 }
 
@@ -129,6 +129,12 @@ input {
     }
 #leftNav div.leftNavThirdLevel div a {
     padding-bottom: 2px;
+}
+#leftNav div.leftNavThirdLevel .thirdLevelSelectedLink {
+    color: #aaa;
+}
+#leftNav div.leftNavThirdLevel div a:hover {
+    color: #6f6f6f;
 }
     a:hover, a:active {
         text-decoration: none;

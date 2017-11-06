@@ -12,7 +12,8 @@
         <li><a href="/your-safety/emergency-procedures/earthquake.aspx" title="Earthquake">Earthquake</a></li>
         <li><a href="/your-safety/emergency-procedures/building-evacuation.aspx" title="Building Evacuation">Building Evacuation</a></li>
         <li><a href="/your-safety/emergency-procedures/fire.aspx" title="Fire">Fire</a></li>
-        <li><a href="/your-safety/emergency-procedures/power-outage.aspx" title="Medical Emergencies>Medical Emergencies</a></li> <li><a href=">Power Outage</a></li>
+        <li><a href="/your-safety/emergency-procedures/power-outage.aspx" title="Medical Emergencies">Medical Emergencies</a></li>
+        <li><a href="/your-safety/emergency-procedures/power-outage">Power Outage</a></li>
         <li><a href="/your-safety/emergency-procedures/suspicious-package.aspx" title="Suspicious Package">Suspicious Package</a></li>
         <li><a href="/your-safety/emergency-procedures/suspicious-or-hazardous-substance.aspx" title="Suspicious or Hazardous Substance">Suspicious or Hazardous Substance</a></li>
     </ul>

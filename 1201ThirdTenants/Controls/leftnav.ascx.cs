@@ -11,12 +11,18 @@ namespace _1201ThirdTenants.Controls
     public partial class leftnav : System.Web.UI.UserControl
     {
         private string _currentFolder = String.Empty;
+        private string _currentPage = String.Empty;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             string virtualSiteName = String.Empty;// ConfigurationManager.AppSettings["DevSiteName"].ToString();
             string actualRequestPath = Request.Url.AbsolutePath.ToString();//.Replace(virtualSiteName, String.Empty);
-            _currentFolder = Request.Url.LocalPath.Split('/')[1];
+            var requestArray = Request.Url.LocalPath.Split('/');
+
+            _currentFolder = requestArray[1];
+            if (requestArray.Length > 2)
+                _currentPage = requestArray[2];
+
 
             GetSideNav();
         }
@@ -64,38 +70,40 @@ namespace _1201ThirdTenants.Controls
                 link.Text = node.Attributes["title"].Value;
                 link.NavigateUrl = node.Attributes["url"].Value;
 
-                if (CleanUrl(link.NavigateUrl) == CleanCurrentPath())
-                    pnl.CssClass += " selectedNav";
 
                 pnl.Controls.Add(link);
 
                 outerPanel.Controls.Add(pnl);
 
-                if (node.HasChildNodes)
+                if (node.Attributes["url"].Value.EndsWith(_currentPage))
                 {
-                    Panel level3container = new Panel();
-                    level3container.CssClass = "leftNavThirdLevel selectedSubNav";
+                    pnl.CssClass += " selectedNav";
 
-                    foreach (XmlNode thirdLevelNode in node.ChildNodes)
+                    if (node.HasChildNodes)
                     {
-                        Panel level3pnl = new Panel();
-                        //level3pnl.CssClass = "leftNavThirdLevel";
+                        Panel level3container = new Panel();
+                        level3container.CssClass = "leftNavThirdLevel selectedSubNav";
 
-                        HyperLink level3link = new HyperLink();
-                        level3link.Text = thirdLevelNode.Attributes["title"].Value;
-                        level3link.NavigateUrl = thirdLevelNode.Attributes["url"].Value;
+                        foreach (XmlNode thirdLevelNode in node.ChildNodes)
+                        {
+                            Panel level3pnl = new Panel();
 
-                        if (CleanUrl(level3link.NavigateUrl) == CleanCurrentPath())
-                            level3pnl.CssClass += " thirdLevelSelectedLink";
+                            HyperLink level3link = new HyperLink();
+                            level3link.Text = thirdLevelNode.Attributes["title"].Value;
+                            level3link.NavigateUrl = thirdLevelNode.Attributes["url"].Value;
+
+                            if (CleanUrl(level3link.NavigateUrl) == CleanCurrentPath())
+                                level3link.CssClass = "thirdLevelSelectedLink";
 
 
-                        level3pnl.Controls.Add(level3link);
-                        level3container.Controls.Add(level3pnl);
-                        outerPanel.Controls.Add(level3container);
+                            level3pnl.Controls.Add(level3link);
+                            level3container.Controls.Add(level3pnl);
+                            outerPanel.Controls.Add(level3container);
+                        }
                     }
                 }
-                
             }
+
             PlaceHolder1.Controls.Add(outerPanel);
         }
 
