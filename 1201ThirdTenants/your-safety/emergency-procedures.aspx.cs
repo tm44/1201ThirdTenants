@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace _1201ThirdTenants.your_safety
 {
-    public partial class emergency_procedures : BasePage
+    public partial class EmergencyProcedures : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

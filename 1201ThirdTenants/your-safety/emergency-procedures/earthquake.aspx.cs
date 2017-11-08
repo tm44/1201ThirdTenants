@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace _1201ThirdTenants.tenant_services
+namespace _1201ThirdTenants.your_safety.emergency_procedures
 {
-    public partial class TenantImprovements : BasePage
+    public partial class earthquake : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -10,6 +10,6 @@
 namespace _1201ThirdTenants.your_safety {
     
     
-    public partial class EmergencyProcedures {
+    public partial class floor_wardens {
     }
 }

@@ -170,10 +170,20 @@
     <Content Include="tenant-services\newsletters.aspx" />
     <Content Include="tenant-services\tenant-handbook.aspx" />
     <Content Include="tenant-services\tenant-improvements.aspx" />
+    <Content Include="tenant-services\tenant-improvements\communications-installations.aspx" />
     <Content Include="tenant-services\tenant-resources.aspx" />
     <Content Include="your-safety\default.aspx" />
     <Content Include="your-safety\emergency-procedures.aspx" />
     <Content Include="your-safety\emergency-procedures\bomb-threat.aspx" />
+    <Content Include="your-safety\emergency-procedures\building-evacuation.aspx" />
+    <Content Include="your-safety\emergency-procedures\earthquake.aspx" />
+    <Content Include="your-safety\emergency-procedures\fire.aspx" />
+    <Content Include="your-safety\floor-wardens.aspx" />
+    <Content Include="your-safety\emergency-procedures\medical-emergencies.aspx" />
+    <Content Include="your-safety\emergency-procedures\power-outage.aspx" />
+    <Content Include="your-safety\emergency-procedures\suspicious-or-hazardous-substance.aspx" />
+    <Content Include="your-safety\emergency-procedures\suspicious-package.aspx" />
+    <Content Include="your-safety\resources.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\1201_Home.jpg" />
     <Content Include="Images\banner.png" />
@@ -419,6 +429,13 @@
     <Compile Include="tenant-services\tenant-improvements.aspx.designer.cs">
       <DependentUpon>tenant-improvements.aspx</DependentUpon>
     </Compile>
+    <Compile Include="tenant-services\tenant-improvements\communications-installations.aspx.cs">
+      <DependentUpon>communications-installations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tenant-services\tenant-improvements\communications-installations.aspx.designer.cs">
+      <DependentUpon>communications-installations.aspx</DependentUpon>
+    </Compile>
     <Compile Include="tenant-services\tenant-resources.aspx.cs">
       <DependentUpon>tenant-resources.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -453,6 +470,69 @@
     </Compile>
     <Compile Include="your-safety\emergency-procedures\bomb-threat.aspx.designer.cs">
       <DependentUpon>bomb-threat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\building-evacuation.aspx.cs">
+      <DependentUpon>building-evacuation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\building-evacuation.aspx.designer.cs">
+      <DependentUpon>building-evacuation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\earthquake.aspx.cs">
+      <DependentUpon>earthquake.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\earthquake.aspx.designer.cs">
+      <DependentUpon>earthquake.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\fire.aspx.cs">
+      <DependentUpon>fire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\fire.aspx.designer.cs">
+      <DependentUpon>fire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="your-safety\floor-wardens.aspx.cs">
+      <DependentUpon>floor-wardens.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="your-safety\floor-wardens.aspx.designer.cs">
+      <DependentUpon>floor-wardens.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\medical-emergencies.aspx.cs">
+      <DependentUpon>medical-emergencies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\medical-emergencies.aspx.designer.cs">
+      <DependentUpon>medical-emergencies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\power-outage.aspx.cs">
+      <DependentUpon>power-outage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\power-outage.aspx.designer.cs">
+      <DependentUpon>power-outage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\suspicious-or-hazardous-substance.aspx.cs">
+      <DependentUpon>suspicious-or-hazardous-substance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\suspicious-or-hazardous-substance.aspx.designer.cs">
+      <DependentUpon>suspicious-or-hazardous-substance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\suspicious-package.aspx.cs">
+      <DependentUpon>suspicious-package.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="your-safety\emergency-procedures\suspicious-package.aspx.designer.cs">
+      <DependentUpon>suspicious-package.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="your-safety\resources.aspx.cs">
+      <DependentUpon>resources.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="your-safety\resources.aspx.designer.cs">
+      <DependentUpon>resources.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

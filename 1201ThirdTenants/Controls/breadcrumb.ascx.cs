@@ -49,7 +49,17 @@ namespace _1201ThirdTenants.Controls
             var currentNode = doc.SelectSingleNode($"/siteMap/siteMapNode/siteMapNode[contains(translate(@url, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '{_currentPage.ToLower()}')]");
 
             if (currentNode != null)
-                Placeholder1.Controls.Add(new LiteralControl(currentNode.Attributes["title"].Value));
+            {
+                if (!currentNode.HasChildNodes || Request.Url.Segments.Length < 4)
+                    Placeholder1.Controls.Add(new LiteralControl(currentNode.Attributes["title"].Value));
+                else
+                {
+                    Placeholder1.Controls.Add(new LiteralControl($"<a href=\"{currentNode.Attributes["url"].Value.Replace("~", string.Empty)}\">{currentNode.Attributes["title"].Value}</a> /// "));
+                    var currentLowestLevelNode = doc.SelectSingleNode($"/siteMap/siteMapNode/siteMapNode/siteMapNode[contains(translate(@url, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '/{Request.Url.Segments[3]}')]");
+                    if (currentLowestLevelNode != null)
+                        Placeholder1.Controls.Add(new LiteralControl(currentLowestLevelNode.Attributes["title"].Value));
+                }
+            }
 
 
         }

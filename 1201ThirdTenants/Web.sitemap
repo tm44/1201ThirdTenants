@@ -33,7 +33,9 @@
     <siteMapNode url="~/tenant-services/newsletters" title="Newsletters"  description="" />
     <siteMapNode url="~/tenant-services/tenant-handbook" title="Tenant Handbook"  description="" />
     <siteMapNode url="~/tenant-services/tenant-resources" title="Tenant Resources"  description="" />
-    <siteMapNode url="~/tenant-services/tenant-improvements" title="Tenant Improvements"  description="" />
+    <siteMapNode url="~/tenant-services/tenant-improvements" title="Tenant Improvements"  description="">
+      <siteMapNode url="~/tenant-services/tenant-improvements/communications-installations" title="Communications Installations"  description="" />  
+    </siteMapNode>
   </siteMapNode>
   <siteMapNode url="~/contact/" title="Contact"  description="" />
 </siteMap>

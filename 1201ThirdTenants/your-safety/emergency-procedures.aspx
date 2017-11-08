@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="emergency-procedures.aspx.cs" Inherits="_1201ThirdTenants.your_safety.emergency_procedures" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="emergency-procedures.aspx.cs" Inherits="_1201ThirdTenants.your_safety.EmergencyProcedures" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
